@@ -1,7 +1,6 @@
 from datetime import datetime
 from journal_data import journal_data
 import time
-from collections import defaultdict
 
 # Function to add a journal entry
 def add_journal():
@@ -183,12 +182,14 @@ def edit_journal():
     new_title = old_journal["title"]
     new_content = old_journal["content"]
     new_date = old_journal["date"]
+    new_location = old_journal["location"]
 
     # Display options to edit title, content, or date
     print("Options for editing:")
     print("1. Journal Title")
     print("2. Journal Content")
     print("3. Journal Date")
+    print("4. Journal Location")
 
     edit_choice = input("Enter the option number: ")
 
@@ -207,6 +208,8 @@ def edit_journal():
                 break
             except ValueError:
                 print("Invalid date format. Please enter the date in the correct format.")
+    elif edit_choice == "4":
+        new_location = input(f"Edit location visited ({old_journal['location']}, Format: City, Country, e.g., Batam, Indonesia): ") or old_journal["location"]
     else:
         print("Invalid choice.")
         return
@@ -215,7 +218,8 @@ def edit_journal():
     journal_data[journal_number - 1] = {
         "title": new_title,
         "content": new_content,
-        "date": new_date
+        "date": new_date,
+        "location": new_location
     }
 
     # Confirmation message
