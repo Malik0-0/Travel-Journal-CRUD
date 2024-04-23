@@ -1,4 +1,3 @@
-
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -8,14 +7,13 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
       <ul>
         <li><a href="#installation">Installation</a></li>
       </ul>
-    </li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
+
 
 <!-- ABOUT THE PROJECT -->
 
@@ -69,7 +67,7 @@ This project was completely built using the tools:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Malik0-0/Travel-Journal-CRUD.git
+   git clone https://github.com/Malik0-0/Travel-Journal-CRUD-.git
    ```
 
 <!-- USAGE EXAMPLES -->

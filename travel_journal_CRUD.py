@@ -54,7 +54,7 @@ def search_journal():
     found_journals = []
 
     for journal in journal_data:
-        if keyword.lower() in journal["title"].lower() or keyword.lower() in journal["content"].lower():
+        if keyword.lower() in journal["title"].lower() or keyword.lower() in journal["content"].lower() or keyword.lower() in journal["date"].lower() or keyword.lower() in journal["location"].lower():
             found_journals.append(journal)
 
     if found_journals:

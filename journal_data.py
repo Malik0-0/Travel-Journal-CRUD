@@ -8,12 +8,6 @@ journal_data = [
         "location": "Amazon Rainforest, Brazil"
     },
     {
-        "title": "Adventure in the Amazon Rainforest",
-        "content": "Trekking through the Amazon valleys is exhausting, but witnessing the biodiversity here is truly awe-inspiring.",
-        "date": "28-09-2023",
-        "location": "Amazon Rainforest, Brazil"
-    },
-    {
         "title": "Journey to Mount Everest",
         "content": "Today, I successfully reached the summit of Mount Everest. The view from up here is absolutely breathtaking!",
         "date": "15-03-2023",
