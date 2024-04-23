@@ -69,7 +69,7 @@ This project was completely built using the tools:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Malik0-0/Travel-Journal-CRUD-.git
+   git clone https://github.com/Malik0-0/Travel-Journal-CRUD.git
    ```
 
 <!-- USAGE EXAMPLES -->
