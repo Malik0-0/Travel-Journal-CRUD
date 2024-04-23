@@ -1,6 +1,5 @@
 from datetime import datetime
 from journal_data import journal_data
-import time
 
 def input_with_message(message):
     while True:
@@ -47,14 +46,13 @@ def display_journal_details(journal):
     print(f"Content: {journal['content']}")
     print(f"Date: {journal['date']}")
     print("-" * 155)
-    time.sleep(3)
 
 def search_journal():
     keyword = input_with_message("Enter search keyword: ")
     found_journals = []
 
     for journal in journal_data:
-        if keyword.lower() in journal["title"].lower() or keyword.lower() in journal["content"].lower() or keyword.lower() in journal["date"].lower() or keyword.lower() in journal["location"].lower():
+        if keyword.lower() in journal["title"].lower() or keyword.lower() in journal["content"].lower() or keyword.lower() in journal["date"].lower() or keyword.lower() in journal["content"].lower():
             found_journals.append(journal)
 
     if found_journals:
@@ -153,9 +151,19 @@ def sort_journals_by_date():
     print("Journals have been sorted by date.")
 
 def filter_journals_by_year():
-    year = input_valid_date("Enter the year to filter journals (format: YYYY): ").year
+    # Request year from the user
+    while True:
+        year_input = input("Enter the year to filter journals (format: YYYY): ")
+        try:
+            year = datetime.strptime(year_input, '%Y').year
+            break
+        except ValueError:
+            print("Invalid year format. Please enter the year in the correct format.")
+
+    # Filter journals by year
     filtered_journals = [journal for journal in journal_data if datetime.strptime(journal['date'], '%d-%m-%Y').year == year]
 
+    # Display filtered journals
     if filtered_journals:
         print(f"Journals for the year {year}:")
         for idx, journal in enumerate(filtered_journals):
@@ -165,14 +173,26 @@ def filter_journals_by_year():
         print(f"No journals for the year {year}.")
 
 def filter_journals_by_year_range():
-    start_year = input_valid_date("Enter the start year (format: YYYY): ").year
-    end_year = input_valid_date("Enter the end year (format: YYYY): ").year
+    # Request year range from the user
+    while True:
+        start_year_input = input("Enter the start year (format: YYYY): ")
+        end_year_input = input("Enter the end year (format: YYYY): ")
+        try:
+            start_year = datetime.strptime(start_year_input, '%Y').year
+            end_year = datetime.strptime(end_year_input, '%Y').year
+            break
+        except ValueError:
+            print("Invalid year format. Please enter the year in the correct format.")
+
+    # Filter journals by year range
     filtered_journals = [journal for journal in journal_data if start_year <= datetime.strptime(journal['date'], '%d-%m-%Y').year <= end_year]
 
+    # Display filtered journals
     if filtered_journals:
         print(f"Journals within the year range {start_year}-{end_year}:")
         for idx, journal in enumerate(filtered_journals):
             print(f"{idx + 1}. {journal['title']}")
+            # Display journal details
             display_journal_details(journal)
     else:
         print(f"No journals within the year range {start_year}-{end_year}.")
