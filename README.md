@@ -1,16 +1,3 @@
-`<a name="readme-top"></a>`
-
-<!-- PROJECT SHIELDS --
-
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/malik-alrasyid-basori/
-
-[LinkedIn][linkedin-url]
-
-
-<h3 align="center">Travel Journal</h3>
-
-<!-- TABLE OF CONTENTS -->
 
 <details>
   <summary>Table of Contents</summary>
@@ -70,16 +57,13 @@ The following are the additional features available:
 
   And the last additional feature is to show users a summary of the trips they have made based on the journals in the database and categorized by year.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Built With
 
 This project was completely built using the tools:
 
-* [Python][Python-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+* Python
+* Datetime Library
+* Time Library
 
 ### Installation
 
@@ -95,7 +79,6 @@ This project was completely built using the tools:
 The flow of using this application is very simple. When run, the program will display various main menus that can be selected in the application and to access additional features the user can select the fifth option, namely "Additional Features".
 
 For an explanation of the use of each feature, it has been explained in "About the Project" and to see how the application workflow works, users can open the "Flowchart of Capstone Project.pdf" file.
-
 
 Main Menu:
 
@@ -127,8 +110,6 @@ Additional Menu:
 * Option 6:
   Users can select option 6 on the Additional menu if they want to Return to the Main Menu.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CONTACT -->
 
 ## Contact
@@ -136,5 +117,3 @@ Additional Menu:
 Malik Alrasyid Basori - malikalrasyidbasori.1@gmail.com
 
 Project Link: https://github.com/Malik0-0
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
