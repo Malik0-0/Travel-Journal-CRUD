@@ -114,4 +114,4 @@ Additional Menu:
 
 Malik Alrasyid Basori - malikalrasyidbasori.1@gmail.com
 
-Project Link: https://github.com/Malik0-0
+Github Link: https://github.com/Malik0-0
